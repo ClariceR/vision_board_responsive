@@ -95,12 +95,6 @@ strong {
         grid-template-columns: repeat(3, minmax(14em, 1fr));
         grid-template-rows: 3fr 5fr 3fr;
     }
-    .small-block {
-        padding: 20px 0;
-    }
-    .large-block {
-        padding: 70px 0;
-    }
     #travel {
         padding-right: 0;
     }
