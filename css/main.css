@@ -39,11 +39,7 @@ body {
 }
 
 .left p, .left img {
-    padding-left: 2em;
-}
-
-#travel {
-    padding-right: 2em;
+    padding-left: 1.5em;
 }
 
 .center {
@@ -61,6 +57,15 @@ body {
 
 .large-block {
 	padding: 70px 0;
+}
+
+#travel {
+    padding-right: 1.5em;
+}
+
+#zen {
+    justify-content: flex-end;
+    padding-right: 1.5em;
 }
 
 .highlight {
@@ -85,22 +90,22 @@ strong {
 	font-size: 1.875em;
 }
 
-@media (min-width: 935px) {
+@media (min-width: 1024px) {
     #vision-board {
         grid-template-columns: repeat(3, minmax(14em, 1fr));
         grid-template-rows: 3fr 5fr 3fr;
     }
-    
     .small-block {
         padding: 20px 0;
     }
-    
     .large-block {
         padding: 70px 0;
     }
-
     #travel {
         padding-right: 0;
+    }
+    #zen {
+        padding-right: 3em;
     }
     .left p, .left img {
         padding-left: 0;
