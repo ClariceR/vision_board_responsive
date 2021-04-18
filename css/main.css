@@ -1,34 +1,53 @@
+/* Styling */
 body {
 	background: #E8E8E8;
 }
 
 #vision-board {
-	margin: 50px auto;
-	width: 1200px;
-	height: 850px;
+	margin: 1.5rem;
 	overflow: auto;
 	background: url('../img/background.png');
 	background-size: cover;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
+	font-size: 1rem;
 	font-weight: 700;
 	text-transform: uppercase;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+	'eye'
+	'grow'
+	'flower'
+	'skills'
+	'piggy'
+	'activities'
+	'doggo'
+	'zen'
+	'travel';
 }
 
- .block {
-	float: left;
+#eye {grid-area: eye;}
+#grow {grid-area: grow;}
+#flower {grid-area: flower;}
+#skills {grid-area: skills;}
+#piggy {grid-area: piggy;}
+#activities {grid-area: activities;}
+#doggo {grid-area: doggo;}
+#zen {grid-area: zen;}
+
+.block {
 	box-sizing: border-box;
-	width: 400px;
+	display: flex;
+	flex-direction: column;
+	padding: 2.5rem 1.5rem;
 }
 
- .small-block {
-	padding: 20px 40px;
-	height: 210px;
+.small-block {
+	display: block;
 }
 
- .large-block {
-	padding: 70px 40px;
-	height: 430px;
+.large-block {
+	display: block;
 }
 
  .center {
@@ -50,9 +69,9 @@ body {
 
 
  .highlight {
-	padding: 5px 15px;
+	padding: 0.3rem 0.8rem;
 	background: #FFF44F;
-	font-size: 18px;
+	font-size: 1rem;
 }
 
  .marker {
@@ -61,16 +80,55 @@ body {
 }
 
  strong {
-	font-size: 38px;
+	font-size: 2rem;
 	text-transform: none; 
-	line-height: 38px;
+	line-height: 2rem;
 }
 
  .title {
-	margin: 10px 0;
-	font-size: 30px;
+	margin: 0.5rem 0;
+	font-size: 1.5rem;
 }
 
- .top-padding {
-	padding-top: 40px;
-}  
+@media (min-width: 680px) {
+	#vision-board {
+		font-size: 1.1rem;
+		margin: 2rem;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-areas:
+		'eye eye'
+		'piggy skills'
+		'grow flower'
+		'doggo zen'
+		'activities travel';
+	}
+	strong {
+		font-size: 2.2rem;
+		line-height: 3.4rem;
+	}
+	#eye p {
+		font-size: 2.3rem;
+	}
+	.highlight {
+		padding: 0.4rem 0.8rem;
+	}
+	.block {
+		padding: 3rem 2rem;
+	}
+	.words {
+		padding-top: 3.3rem;
+		line-height: 3rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	#vision-board {
+		font-size: 1.3rem;
+		margin: 3rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-areas:
+		'grow flower skills'
+		'piggy eye travel'
+		'activities doggo zen';
+	}
+}
