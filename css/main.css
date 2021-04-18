@@ -5,7 +5,6 @@ body {
 
 #vision-board {
 	margin: 1.5rem;
-	overflow: auto;
 	background: url('../img/background.png');
 	background-size: cover;
 	font-family: 'Montserrat', sans-serif;
@@ -130,5 +129,14 @@ body {
 		'grow flower skills'
 		'piggy eye travel'
 		'activities doggo zen';
+	}
+	.block {
+		padding: 3rem 3rem;
+	}
+	span {
+		padding-bottom: 2rem;
+	}
+	#flower, #doggo {
+		align-self: center;
 	}
 }
